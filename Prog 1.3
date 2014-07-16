@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prog1._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Int32 i, n, s, k = 0;
+            Int32[] x = new Int32[10];
+            Console.Write("Введите n: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            for (i = 0; i < 10; i++)
+            {
+                x[i] = 0;
+            }
+            do
+            {
+                s= n % 10;
+                x[s]++;
+            }
+            while ((n/=10)!=0);
+            for (i=0; i<10; i++)
+            {
+                if(x[i]!=0)
+                {
+                    k=k+1;
+                }
+            }
+            Console.Write("Количество различных цифр в числе n: ");
+             Console.Write(k);
+        Console.ReadLine();
+        }
+      
+    }
+}
